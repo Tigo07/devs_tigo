@@ -20,9 +20,9 @@ def download_relatorio(playwright: Playwright) -> None:
 
     page.goto("https://wrs.solutions.iqvia.com/login.php")
     page.get_by_label("Usuário").click()
-    page.get_by_label("Usuário").fill("tiago.prazeres@grupocimed.com.br")
-    page.get_by_label("Senha").click()
-    page.get_by_label("Senha").fill("520195@Tigo")
+    page.get_by_label("Usuário").fill("**")
+    page.get_by_label("Senha").click() ##aqui usuario
+    page.get_by_label("Senha").fill("**") ##aqui senha
     page.get_by_role("button", name="Login").click()
     page.wait_for_url("https://wrs.solutions.iqvia.com/run.php?file=MAIN&class=WRS_MAIN&ncon")
     page.locator("md-card:has-text(\"FMB Base de Dados contendo demanda Brasil Abrir Novo Mensal: 2022/08/01 - Semana\")").get_by_role("link", name="Abrir").click()
