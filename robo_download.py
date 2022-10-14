@@ -20,8 +20,8 @@ def download_relatorio(playwright: Playwright) -> None:
 
     page.goto("https://wrs.solutions.iqvia.com/login.php")
     page.get_by_label("Usuário").click()
-    page.get_by_label("Usuário").fill("**")
-    page.get_by_label("Senha").click() ##aqui usuario
+    page.get_by_label("Usuário").fill("**")##aqui usuario
+    page.get_by_label("Senha").click() 
     page.get_by_label("Senha").fill("**") ##aqui senha
     page.get_by_role("button", name="Login").click()
     page.wait_for_url("https://wrs.solutions.iqvia.com/run.php?file=MAIN&class=WRS_MAIN&ncon")
