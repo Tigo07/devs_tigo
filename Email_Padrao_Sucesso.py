@@ -13,8 +13,8 @@ def enviando_email(job):
     # Configuração
     host = 'smtp.office365.com'
     port = 587
-    user = 'relatorios@gruposc.com.br'
-    password = 'a123456*'
+    user = ''
+    password = *'
 
     # Criando objeto
     #print('Criando objeto servidor...')
@@ -34,29 +34,16 @@ def enviando_email(job):
 
     Sem mais,
 
-    André Ramos
-    Depto  IM.
     '''
 
-    ### message_html = '''
-    ### <html>
-    ###   <head></head>
-    ###   <body>
-    ###     <p>Olá!<br>
-    ###        Como você está?<br>
-    ###        Aqui vai um <a href="http://www.python.org">link</a> que talvez você goste.
-    ###     </p>
-    ###   </body>
-    ### </html>
-    ### '''
 
     #print('Criando mensagem...')
     email_msg = MIMEMultipart()
     email_msg['From'] = user
 
     ### especifique os emails que vão receber
-    recipients = 'andre.ramos@gruposc.com.br,tiago.prazeres@gruposc.com.br'
-    ###email_msg['To'] = 'andre.ramos@gruposc.com.br'
+    recipients = '@,@'
+    ###email_msg['To'] = ''
     email_msg['To'] = recipients
     email_msg['Subject'] = job
     print('Adicionando texto...')
@@ -68,7 +55,7 @@ def enviando_email(job):
     #########################
     #print('Obtendo arquivo...')
     #filename = str(nomeArquivo) 
-    #filepath = '//10.41.14.62/qlik_sc/QlikView_STCRUZ/PRD/12.Arquivos/12/'+str(nomeArquivo)
+    #filepath = '**'+str(nomeArquivo)
     #attachment = open(filepath, 'rb')
 
     #print('Lendo arquivo...')
